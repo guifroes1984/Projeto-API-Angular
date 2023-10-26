@@ -51,7 +51,7 @@ export class LancamentoService {
         const lancamentos = responseJson.content;
 
         const resultado = {
-          lancamentos, 
+          lancamentos,
           total: responseJson.totalElements
         };
 
