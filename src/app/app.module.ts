@@ -1,15 +1,17 @@
-import { LancamentoService } from './lancamentos/lancamento.service';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { ToastyModule } from 'ng2-toasty';
+
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { PessoasModule } from './pessoas/pessoas.module';
 import { LancamentosModule } from './lancamentos/lancamentos.module';
 import { PessoaService } from './pessoas/pessoas.service';
+import { LancamentoService } from './lancamentos/lancamento.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { PessoaService } from './pessoas/pessoas.service';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    HttpModule,
+    HttpModule, 
+
+    ToastyModule.forRoot(),
 
     CoreModule,
     LancamentosModule,
