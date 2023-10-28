@@ -1,5 +1,6 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { ConfirmationService } from 'primeng/components/common/api';
 import { ConfirmDialogModule } from 'primeng/components/confirmdialog/confirmdialog';
@@ -13,7 +14,8 @@ import { CategoriaService } from 'app/categorias/categoria.service';
 
 @NgModule({
   imports: [
-    CommonModule,
+    CommonModule, 
+    RouterModule,
 
     ToastyModule.forRoot(),
     ConfirmDialogModule,
