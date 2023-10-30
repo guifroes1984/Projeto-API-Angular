@@ -11,6 +11,7 @@ import { PessoaService } from 'app/pessoas/pessoas.service';
 import { LancamentoService } from 'app/lancamentos/lancamento.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CategoriaService } from 'app/categorias/categoria.service';
+import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,7 @@ import { CategoriaService } from 'app/categorias/categoria.service';
     ToastyModule.forRoot(),
     ConfirmDialogModule,
   ],
-  declarations: [NavbarComponent],
+  declarations: [NavbarComponent, PaginaNaoEncontradaComponent],
   exports: [
     NavbarComponent,
     ToastyModule,

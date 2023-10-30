@@ -29,12 +29,8 @@ import { PessoasGridComponent } from './pessoas-grid/pessoas-grid.component';
   ],
   declarations: [
     PessoaCadastroComponent,
-    PessoasPesquisaComponent,
-    PessoasGridComponent
-  ], 
-  exports: [
-    PessoaCadastroComponent,
     PessoasPesquisaComponent
-  ]
+  ], 
+  exports: []
 })
 export class PessoasModule { }
