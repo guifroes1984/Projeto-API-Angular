@@ -1,10 +1,11 @@
+import { Title } from '@angular/platform-browser';
 import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { ConfirmationService, LazyLoadEvent } from 'primeng/components/common/api';
-
-import { PessoaFiltro, PessoaService } from '../pessoas.service';
-import { ErrorHandleService } from 'app/core/error-handle.service';
 import { ToastyService } from 'ng2-toasty';
+
+import { ErrorHandleService } from 'app/core/error-handle.service';
+import { PessoaFiltro, PessoaService } from '../pessoas.service';
 
 @Component({
   selector: 'app-pessoas-pesquisa',
@@ -22,11 +23,12 @@ export class PessoasPesquisaComponent implements OnInit {
     private pessoaService: PessoaService,
     private errorHandle: ErrorHandleService,
     private confirmation: ConfirmationService,
-    private toasty: ToastyService
+    private toasty: ToastyService, 
+    private title: Title
     ) { }
 
   ngOnInit() {
-    
+    this.title.setTitle('Pesquisa de pessoas')
   }
 
   pesquisar(pagina = 0) {
@@ -44,7 +46,7 @@ export class PessoasPesquisaComponent implements OnInit {
     this.pesquisar(pagina);
   }
 
-  confirmaExclusao(pessoa: any) {
+  confirmarExclusao(pessoa: any) {
     this.confirmation.confirm({
       message: 'Tem certeza que deseja excluir?',
       accept: () => {
