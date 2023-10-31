@@ -15,6 +15,7 @@ import { ButtonModule } from 'primeng/components/button/button';
 import { InputTextModule } from 'primeng/components/inputtext/inputtext';
 
 
+import { LancamentosRoutingModule } from './lancamento-routing.module';
 import { SharedModule } from 'app/shared/shared.module';
 import { LancamentosPesquisaComponent } from './lancamentos-pesquisa/lancamentos-pesquisa.component';
 import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-cadastro.component';
@@ -23,7 +24,6 @@ import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-ca
   imports: [
     CommonModule, 
     FormsModule, 
-    RouterModule, 
 
     InputTextModule,
     ButtonModule,
@@ -35,7 +35,8 @@ import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-ca
     DropdownModule,
     CurrencyMaskModule, 
 
-    SharedModule
+    SharedModule, 
+    LancamentosRoutingModule
   ],
   declarations: [
     LancamentoCadastroComponent, 
