@@ -9,12 +9,14 @@ import { CoreModule } from './core/core.module';
 import { PessoasModule } from './pessoas/pessoas.module';
 import { LancamentosModule } from './lancamentos/lancamentos.module';
 import { AppRoutingModule } from './app-routing.module';
+import { SegurancaModule } from './seguranca/seguranca.module';
+
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,6 +26,7 @@ import { AppRoutingModule } from './app-routing.module';
     CoreModule,
     LancamentosModule,
     PessoasModule, 
+    SegurancaModule, 
     AppRoutingModule
   ],
   providers: [
