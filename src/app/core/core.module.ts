@@ -7,6 +7,7 @@ import { ConfirmationService } from 'primeng/components/common/api';
 import { ConfirmDialogModule } from 'primeng/components/confirmdialog/confirmdialog';
 import { ToastyModule } from 'ng2-toasty';
 
+import { AuthService } from 'app/seguranca/auth.service';
 import { ErrorHandleService } from './error-handle.service';
 import { PessoaService } from 'app/pessoas/pessoas.service';
 import { LancamentoService } from 'app/lancamentos/lancamento.service';
@@ -16,7 +17,7 @@ import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada.component'
 
 @NgModule({
   imports: [
-    CommonModule, 
+    CommonModule,
     RouterModule,
 
     ToastyModule.forRoot(),
@@ -30,12 +31,13 @@ import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada.component'
   ],
   providers: [
     LancamentoService,
-    PessoaService, 
-    CategoriaService, 
+    PessoaService,
+    CategoriaService,
     ErrorHandleService,
+    AuthService,
 
-    ConfirmationService, 
-    Title, 
+    ConfirmationService,
+    Title,
     { provide: LOCALE_ID, useValue: 'pt-BR' },
   ]
 })
