@@ -7,18 +7,17 @@ import { JwtHelper } from 'angular2-jwt';
 @Injectable()
 export class AuthService {
 
-  constructor(
-    private http: Http,
-    private jwtHelper: JwtHelper
-    ) {
-      this.carregarToken();
-    }
-
   oauthTokenUrl = 'http://localhost:8080/oauth/token';
   jwtPayload: any;
 
-  login(usuario: string, senha: string): Promise<void> {
+  constructor(
+    private http: Http,
+    private jwtHelper: JwtHelper
+  ) {
+    this.carregarToken();
+  }
 
+  login(usuario: string, senha: string): Promise<void> {
     const headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
     headers.append('Authorization', 'Basic YW5ndWxhcjpAbmd1bEByMA==');
@@ -31,7 +30,7 @@ export class AuthService {
         this.armazenarToken(response.json().access_token);
       })
       .catch(response => {
-        if (response.status == 400) {
+        if (response.status === 400) {
           const responseJson = response.json();
 
           if (responseJson.error === 'invalid_grant') {

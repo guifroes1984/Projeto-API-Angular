@@ -43,7 +43,7 @@ export class PessoaCadastroComponent implements OnInit {
   }
 
   carregarPessoa(codigo: number) {
-    this.pessoaService.buscaPorCodigo(codigo)
+    this.pessoaService.buscarPorCodigo(codigo)
       .then(pessoa => {
         this.pessoa = pessoa;
         this.atualizarTituloEdicao();

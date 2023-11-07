@@ -56,7 +56,7 @@ export class PessoasPesquisaComponent implements OnInit {
   }
 
   excluir(pessoa: any) {
-    this.pessoaService.exluir(pessoa.codigo)
+    this.pessoaService.excluir(pessoa.codigo)
       .then(() => {
         if (this.grid.first === 0) {
           this.pesquisar();
