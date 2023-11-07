@@ -11,27 +11,27 @@ import { TooltipModule } from 'primeng/components/tooltip/tooltip';
 import { SharedModule } from 'app/shared/shared.module';
 import { PessoasPesquisaComponent } from './pessoas-pesquisa/pessoas-pesquisa.component';
 import { PessoaCadastroComponent } from './pessoas-cadastro/pessoas-cadastro.component';
-import { PessoasRoutingModule } from './pessoas-routing.component';
+import { PessoasRoutingModule } from './pessoas-routing.module';
 
 @NgModule({
   imports: [
-    CommonModule, 
+    CommonModule,
     FormsModule,
 
     InputTextModule,
     ButtonModule,
     DataTableModule,
     TooltipModule,
-    InputMaskModule, 
+    InputMaskModule,
 
-    SharedModule, 
+    SharedModule,
     PessoasRoutingModule
 
   ],
   declarations: [
     PessoaCadastroComponent,
     PessoasPesquisaComponent
-  ], 
+  ],
   exports: []
 })
 export class PessoasModule { }
