@@ -64,7 +64,13 @@ export class AuthService {
       console.error('Erro ao renovar token.', response);
       return Promise.resolve(null);
     });
-}
+  }
+
+  isAccessTokenInvalido() {
+    const token = localStorage.getItem('token');
+
+    return !token || this.jwtHelper.isTokenExpired(token);
+  }
 
   temPermissao(permissao: string) {
     return this.jwtPayload && this.jwtPayload.authorities.includes(permissao);
