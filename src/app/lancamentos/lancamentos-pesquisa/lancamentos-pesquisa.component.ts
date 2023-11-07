@@ -4,8 +4,9 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { LazyLoadEvent, ConfirmationService } from 'primeng/components/common/api';
 import { ToastyService } from 'ng2-toasty';
 
-import { LancamentoFiltro, LancamentoService } from '../lancamento.service';
+import { AuthService } from 'app/seguranca/auth.service';
 import { ErrorHandleService } from 'app/core/error-handle.service';
+import { LancamentoFiltro, LancamentoService } from '../lancamento.service';
 
 
 @Component({
@@ -22,9 +23,10 @@ export class LancamentosPesquisaComponent implements OnInit {
 
   constructor(
     private lancamentoService: LancamentoService,
+    private auth: AuthService,
     private errorHandle: ErrorHandleService,
     private toasty: ToastyService,
-    private confirmation: ConfirmationService, 
+    private confirmation: ConfirmationService,
     private title: Title
     ) { }
 
