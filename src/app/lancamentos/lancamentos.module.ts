@@ -1,5 +1,5 @@
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -22,8 +22,9 @@ import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-ca
 
 @NgModule({
   imports: [
-    CommonModule, 
-    FormsModule, 
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
 
     InputTextModule,
     ButtonModule,
@@ -33,15 +34,15 @@ import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-ca
     CalendarModule,
     SelectButtonModule,
     DropdownModule,
-    CurrencyMaskModule, 
+    CurrencyMaskModule,
 
-    SharedModule, 
+    SharedModule,
     LancamentosRoutingModule
   ],
   declarations: [
-    LancamentoCadastroComponent, 
+    LancamentoCadastroComponent,
     LancamentosPesquisaComponent
-  ], 
+  ],
   exports: []
 })
 export class LancamentosModule { }
